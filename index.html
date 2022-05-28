@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/progress.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Custom Video Player</title>
+  </head>
+  <body>
+    <h1>Custom Video Player</h1>
+    <video
+      src="videos/gone.mp4"
+      id="video"
+      class="screen"
+      poster="img/poster.png"
+    ></video>
+    <!-- Style for poster in video tag => style="object-fit:cover; width:800px; height:600px;"
+    style="object-fit: cover; width: 70%; max-width: 900px"
+    NOTE: Still but don't use style on poster, it will create problems with controls and screen. Instead edit the poster or find poster with exact dimensions as the video -->
+    <div class="controls">
+      <button class="btn" id="play">
+        <i class="fas fa-play"></i>
+      </button>
+      <button class="btn" id="stop">
+        <i class="fas fa-stop"></i>
+      </button>
+      <span id="timestamp" class="timestamp">00:00</span>
+      <span class="seperation">/</span>
+      <span id="duration" class="duration">00:00</span>
+      <input
+        type="range"
+        id="progress"
+        class="progress"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+      />
+      <i class="fas fa-volume-down"></i>
+      <input
+        type="range"
+        id="vol-slider"
+        class="vol-slider"
+        min="0"
+        max="100"
+        step="0.1"
+        value="35"
+      />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
